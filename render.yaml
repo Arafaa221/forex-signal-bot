@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: forex-signal-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 8122870086:AAFERJ-M1IWLk_BrTqUA7imHK738sZH684M
+      - key: TELEGRAM_CHAT
+        value: "1548227658"
+      - key: TWELVE_API_KEY
+        value: 347054c86ce64751983ddc9257ceb778
+      - key: MIN_AGREE
+        value: "4"
+      - key: INTERVAL
+        value: 1h
